@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 class TopNewCard extends StatelessWidget {
   final String balance;
-  final String income ;
-  final String expense ;
-  TopNewCard({Key? key, required this.balance, required this.income, required this.expense}) : super(key: key);
+  final String saving ;
+  final String spent ;
+  TopNewCard({Key? key, required this.balance, required this.saving, required this.spent}) : super(key: key);
 
 
   @override
@@ -15,7 +15,7 @@ class TopNewCard extends StatelessWidget {
       child: Container(
 
         height: 200,
-        color: Colors.grey[200],
+        color: Colors.blue[50],
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -27,13 +27,16 @@ class TopNewCard extends StatelessWidget {
               balance,
               style: TextStyle(color: Colors.blue, fontSize: 20),
             ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
             Row(
               children: [
                 Icon(Icons.arrow_upward),
                 Column(
                   children: [
                     Text("saving"),
-                    Text(income  ,style: TextStyle(color: Colors.green, fontSize: 20),),
+                    Text(saving  ,style: TextStyle(color: Colors.green, fontSize: 20),),
                   ],
                 ),
               ],
@@ -44,12 +47,14 @@ class TopNewCard extends StatelessWidget {
                 Column(
                   children: [
                     Text("spent"),
-                    Text(expense ,  style: TextStyle(color: Colors.red, fontSize: 20),),
+                    Text(spent ,  style: TextStyle(color: Colors.red, fontSize: 20),),
                   ],
                 ),
               ],
             )
           ],
+        ),
+  ],
         ),
       ),
     );
