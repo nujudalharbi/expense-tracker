@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import '../../data/model/exoenses_model.dart';
 import '../widget/expenses_card.dart';
 
@@ -70,36 +69,9 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    backgroundColor: Color.fromARGB(255, 249, 247, 247),
-    appBar: AppBar(
-      elevation: 1,
-      backgroundColor: Color.fromARGB(255, 249, 247, 247),
-      title: Text(
-        "New Expenses",
-        style: TextStyle(
-          color: Colors.black,
+        backgroundColor: Color.fromARGB(255, 249, 247, 247),
+        body: ExpensesCard(
+          expenses: expensesItems,
         ),
-      ),
-      actions: [
-        IconButton(
-          icon: Icon(Icons.arrow_upward),
-          onPressed: () {
-            final double value = 0;
-            controller.jumpTo(value);
-          },
-        ),
-        IconButton(
-          icon: Icon(Icons.arrow_downward),
-          onPressed: () {
-            final value = controller.position.maxScrollExtent;
-            controller.jumpTo(value);
-          },
-        ),
-      ],
-    ),
-    body: ExpensesCard(
-      expenses: expensesItems,
-    ),
-  );
+      );
 }
-

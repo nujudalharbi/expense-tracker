@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:expense_tracker/modules/Home/home-screen.dart';
 import 'package:expense_tracker/modules/Profile/profile-screen.dart';
 import 'package:expense_tracker/modules/charts/charts-screen.dart';
+import 'package:expense_tracker/ui/screens/expenses_screen.dart';
 
 class HomeLayout extends StatefulWidget {
   const HomeLayout({super.key});
@@ -14,7 +15,7 @@ class _HomeLayoutState extends State<HomeLayout> {
   int currentIndex = 0;
   List<Widget> screens = [
     HomeScreen(),
-    ChartScreen(),
+    ExpensesScreen(),
     ProfileScreen(),
   ];
 
