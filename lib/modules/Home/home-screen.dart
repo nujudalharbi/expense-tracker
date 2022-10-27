@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
           TopNewCard(
             balance: widget.salary,
             saving: widget.saving,
-            spent: '\$5555',
+            spent: '0',
           ),
           SizedBox(height: 25,),
 

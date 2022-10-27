@@ -1,3 +1,4 @@
+import 'package:expense_tracker/layout/home_layout.dart';
 import 'package:expense_tracker/modules/Home/home-screen.dart';
 import 'package:flutter/material.dart';
 
@@ -116,9 +117,10 @@ class _FWidgetState extends State<FWidget> {
                     salary = Controller2.text;
                     saving = Controller3.text;
 
-                    var router = new MaterialPageRoute(builder: (BuildContext context) => HomeScreen(salary: salary, saving: saving,));
-                    Navigator.of(context).push(router);
                   });
+
+                  var router = new MaterialPageRoute(builder: (BuildContext context) => HomeLayout(salary: salary, saving: saving,));
+                  Navigator.of(context).push(router);
 
                 },
               ),
