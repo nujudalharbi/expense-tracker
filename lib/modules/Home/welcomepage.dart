@@ -1,4 +1,7 @@
+
 import 'package:expense_tracker/layout/home_layout.dart';
+
+
 import 'package:expense_tracker/modules/Home/home-screen.dart';
 import 'package:flutter/material.dart';
 
@@ -126,6 +129,18 @@ class _FWidgetState extends State<FWidget> {
                     Navigator.of(context).push(router);
                   },
                 ),
+
+
+                onPressed: () {
+                  setState(() {
+                    name = Controller1.text;
+                    salary = Controller2.text;
+                    saving = Controller3.text;
+
+                   
+
+                },
+
               ),
             ],
           ),

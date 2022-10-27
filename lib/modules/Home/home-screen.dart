@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 import 'goal.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  String? name ;
+  final String salary ;
+  final String saving;
+  HomeScreen({super.key, required this.salary, required this.saving});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -99,6 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ],
+
     );
   }
 }
