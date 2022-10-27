@@ -1,3 +1,4 @@
+import 'package:expense_tracker/modules/Home/home-screen.dart';
 import 'package:flutter/material.dart';
 
 class FWidget extends StatefulWidget {
@@ -110,11 +111,15 @@ class _FWidgetState extends State<FWidget> {
                   style: TextStyle(fontSize: 20),
                 ),
                 onPressed: () {
-                  setState(() {
-                    name = Controller1.text;
-                    salary = Controller2.text;
-                    saving = Controller3.text;
-                  });
+                  // setState(() {
+                  //   name = Controller1.text;
+                  //   salary = Controller2.text;
+                  //   saving = Controller3.text;
+                  //
+                  //
+                  // });
+                  var router = new MaterialPageRoute(builder: (BuildContext context) => HomeScreen());
+                  Navigator.of(context).push(router);
                 },
               ),
             ),
