@@ -14,7 +14,7 @@ class HomeLayout extends StatefulWidget {
 class _HomeLayoutState extends State<HomeLayout> {
   int currentIndex = 0;
   List<Widget> screens = [
-    HomeScreen(saving: '', salary: '',),
+    HomeScreen(salary: '', saving: '',),
     ExpensesScreen(),
     ProfileScreen(),
   ];

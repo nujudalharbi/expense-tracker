@@ -111,15 +111,15 @@ class _FWidgetState extends State<FWidget> {
                   style: TextStyle(fontSize: 20),
                 ),
                 onPressed: () {
-                  // setState(() {
-                  //   name = Controller1.text;
-                  //   salary = Controller2.text;
-                  //   saving = Controller3.text;
-                  //
-                  //
-                  // });
-                  var router = new MaterialPageRoute(builder: (BuildContext context) => HomeScreen());
-                  Navigator.of(context).push(router);
+                  setState(() {
+                    name = Controller1.text;
+                    salary = Controller2.text;
+                    saving = Controller3.text;
+
+                    var router = new MaterialPageRoute(builder: (BuildContext context) => HomeScreen(salary: salary, saving: saving,));
+                    Navigator.of(context).push(router);
+                  });
+
                 },
               ),
             ),
