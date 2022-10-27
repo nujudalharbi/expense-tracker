@@ -21,18 +21,36 @@ class _HomeScreenState extends State<HomeScreen> {
           saving: '\$555',
           spent: '\$5555',
         ),
-        Text("My GOAL"),
+        SizedBox(height: 25,),
+
+        Container(
+            child: Text("My GOAL" ,style: TextStyle(fontSize: 25 ,),)),
+        SizedBox(height: 8,),
+
 
         Expanded(child:
         Container(
-
+height: 90,
+           width: 310,
            child: MyGoal(),
         ),
         ),
-Text("Recent Expenses"),
-        Text("view all"),
+        SizedBox(height: 25,),
+Container(
+
+    child: Row(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+
+        Text("Recent Expenses" ,style: TextStyle(fontSize: 25),),
+    Text("view all"),
+  ],
+)),
+
+        SizedBox(height: 8,),
         Expanded(
           child: Container(
+
             color: Colors.white,
             child: Center(
               child: Column(
@@ -40,21 +58,22 @@ Text("Recent Expenses"),
                   SizedBox(
                     height: 5,
                   ),
+
                   Expanded(child:
                   Container(
+                    height: 68,
+                    width: 310,
 
                     child: Center(
                       child: Column(
                         children: [
-                          SizedBox(
-                            height: 5,
-                          ),
+
                           Expanded(child: ListView.builder
 
                             (itemCount:5 ,
 
                               itemBuilder: (context , index){
-                                SizedBox(height: 5,);
+                                SizedBox(height: 8);
 
 
                                 return MyTranaction(tranactionName: "transactionName" , money: "money", expenseOrIncome: "income",);

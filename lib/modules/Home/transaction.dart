@@ -8,14 +8,14 @@ class MyTranaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(5),
       child: Container(
         padding: EdgeInsets.all(10),
         height: 50,
         color: Colors.blue[50],
         child: Center(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Icon(Icons.shopping_cart),
               Text(tranactionName),
@@ -24,7 +24,9 @@ class MyTranaction extends StatelessWidget {
               Text((expenseOrIncome == "expense" ? "-" : "+") + money+ "SR" ,style: TextStyle(color: (expenseOrIncome == 'expense' ? Colors.red : Colors.green)),),
             ],
           ),
+
         ),
+
       ),
     );
   }

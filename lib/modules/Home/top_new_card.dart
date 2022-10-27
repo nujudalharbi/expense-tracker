@@ -14,11 +14,14 @@ class TopNewCard extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
 
-        height: 200,
+        height: 159,
+        width: 310,
         color: Colors.blue[50],
         child: Column(
+
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+
             Text(
               " b a l an c e",
               style: TextStyle(color: Colors.black, fontSize: 20),
