@@ -26,8 +26,15 @@ class _HScreenState extends State<HScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: HomeScreen(),
+      appBar: AppBar(
+        elevation: 1,
+        backgroundColor: Color.fromARGB(255, 249, 247, 247),
+        title: Text(
+          "Hello ${titles[currentIndex]}",
+          style: TextStyle(color: Colors.black),
+        ),
+      ),
+      body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: currentIndex,
