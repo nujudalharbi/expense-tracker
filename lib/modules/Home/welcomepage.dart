@@ -1,4 +1,7 @@
+import 'package:expense_tracker/modules/Home/home-screen.dart';
 import 'package:flutter/material.dart';
+
+import 'h_screen.dart';
 
 class FWidget extends StatefulWidget {
   const FWidget({super.key});
@@ -116,6 +119,9 @@ class _FWidgetState extends State<FWidget> {
                       salary = Controller2.text;
                       saving = Controller3.text;
                     });
+                    var router = new MaterialPageRoute(
+                        builder: (BuildContext context) => HScreen());
+                    Navigator.of(context).push(router);
                   },
                 ),
               ),
