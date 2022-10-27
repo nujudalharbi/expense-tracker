@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:expense_tracker/modules/Home/home-screen.dart';
 import 'package:expense_tracker/modules/Profile/profile-screen.dart';
 import 'package:expense_tracker/modules/charts/charts-screen.dart';
+import 'package:expense_tracker/ui/screens/expenses_screen.dart';
 
 class HomeLayout extends StatefulWidget {
   const HomeLayout({super.key});
@@ -14,12 +15,12 @@ class _HomeLayoutState extends State<HomeLayout> {
   int currentIndex = 0;
   List<Widget> screens = [
     HomeScreen(),
-    ChartScreen(),
+    ExpensesScreen(),
     ProfileScreen(),
   ];
 
   List<String> titles = [
-    "Home page",
+    "Noura",
     "Charts page",
     "Profile page",
   ];
@@ -27,7 +28,12 @@ class _HomeLayoutState extends State<HomeLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(titles[currentIndex]),
+        elevation: 1,
+        backgroundColor: Color.fromARGB(255, 249, 247, 247),
+        title: Text(
+          "Hello ${titles[currentIndex]}",
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -40,10 +46,19 @@ class _HomeLayoutState extends State<HomeLayout> {
           items: [
             // need icon and label
             // ignore: prefer_const_constructors
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.add_chart), label: 'Chart'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+                icon: Icon(
+                  Icons.home,
+                  color: Color.fromRGBO(0, 71, 147, 1),
+                ),
+                label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.add, color: Color.fromRGBO(0, 71, 147, 1)),
+                label: 'New'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.chat_rounded,
+                    color: Color.fromRGBO(0, 71, 147, 1)),
+                label: 'Dashboard'),
           ]),
     );
   }
