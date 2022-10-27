@@ -1,3 +1,4 @@
+import 'package:expense_tracker/layout/home_layout.dart';
 import 'package:expense_tracker/modules/Home/home-screen.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,7 @@ class _FWidgetState extends State<FWidget> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: SafeArea(
           child: Column(
@@ -120,7 +122,7 @@ class _FWidgetState extends State<FWidget> {
                       saving = Controller3.text;
                     });
                     var router = new MaterialPageRoute(
-                        builder: (BuildContext context) => HScreen());
+                        builder: (BuildContext context) => HomeLayout());
                     Navigator.of(context).push(router);
                   },
                 ),

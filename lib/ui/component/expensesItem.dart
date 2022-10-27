@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-
 import '../../data/model/exoenses_model.dart';
-
 
 Widget expensesItem(Expenses expenses, BuildContext context) {
   return Container(
@@ -36,42 +34,46 @@ Widget expensesItem(Expenses expenses, BuildContext context) {
                   showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
-                        title: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              expenses.icon!,
-                              //color: Color.fromRGBO(0, 71, 147, 1),
-                              color: expenses.color!,
-                            ),
-                            SizedBox(width: 10),
-                            Text("${expenses.typeExpenses}"),
-                            SizedBox(height: 10),
-                          ],
-                        ),
-                        content: TextField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'Enter a search term',
-                          ),
-                        ),
-                        actions: [
-                          Container(
-                            color: Color.fromRGBO(0, 71, 147, 1),
-                            alignment: Alignment.center,
-                            child: ElevatedButton(
-                                style: ButtonStyle(
-                                  backgroundColor:
-                                  MaterialStatePropertyAll<Color>(
-                                      Color.fromRGBO(0, 71, 147, 1)),
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  expenses.icon!,
+                                  //color: Color.fromRGBO(0, 71, 147, 1),
+                                  color: expenses.color!,
                                 ),
-                                onPressed: () {},
-                                child: Text("Save")),
-                          )
-                        ],
-                      ));
+                                SizedBox(width: 10),
+                                Text("${expenses.typeExpenses}"),
+                                SizedBox(height: 10),
+                              ],
+                            ),
+                            content: TextField(
+                              //controller: Controller1,
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                hintText: 'Enter amount',
+                              ),
+                            ),
+                            actions: [
+                              Container(
+                                //color: Color.fromRGBO(0, 71, 147, 1),
+                                alignment: Alignment.center,
+                                child: ElevatedButton(
+                                    style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStatePropertyAll<Color>(
+                                              Color.fromRGBO(0, 71, 147, 1)),
+                                    ),
+                                    onPressed: () {
+                                      setState() {
+                                        Navigator.of(context).pop();
+                                      }
+                                    },
+                                    child: Text("Save")),
+                              )
+                            ],
+                          ));
                 },
                 icon: Icon(Icons.add)))),
   );
 }
-

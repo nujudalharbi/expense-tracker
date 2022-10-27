@@ -20,7 +20,7 @@ class _HScreenState extends State<HScreen> {
 
   List<String> titles = [
     "Noura",
-    "Charts page",
+    "My Expenses",
     "Profile page",
   ];
   @override
@@ -30,7 +30,7 @@ class _HScreenState extends State<HScreen> {
         elevation: 1,
         backgroundColor: Color.fromARGB(255, 249, 247, 247),
         title: Text(
-          "Hello ${titles[currentIndex]}",
+          "${titles[currentIndex]}",
           style: TextStyle(color: Colors.black),
         ),
       ),

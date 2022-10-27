@@ -21,7 +21,7 @@ class _HomeLayoutState extends State<HomeLayout> {
 
   List<String> titles = [
     "Noura",
-    "Charts page",
+    "My Expenses",
     "Profile page",
   ];
   @override
@@ -31,18 +31,18 @@ class _HomeLayoutState extends State<HomeLayout> {
         elevation: 1,
         backgroundColor: Color.fromARGB(255, 249, 247, 247),
         title: Text(
-          "Hello ${titles[currentIndex]}",
+          "${titles[currentIndex]}",
           style: TextStyle(color: Colors.black),
         ),
       ),
-      // body: HomeScreen(),
+      body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: currentIndex,
           onTap: (value) => setState(() {
                 currentIndex = value;
               }), //يعلمني انا  قاعده اضغط على ايش
-          // ignore: prefer_const_literals_to_create_immutables
+          //ignore: prefer_const_literals_to_create_immutables
           items: [
             // need icon and label
             // ignore: prefer_const_constructors
