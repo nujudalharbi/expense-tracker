@@ -1,17 +1,16 @@
-import 'package:flutter/material.dart';
 import 'package:expense_tracker/modules/Home/home-screen.dart';
 import 'package:expense_tracker/modules/Profile/profile-screen.dart';
-import 'package:expense_tracker/modules/charts/charts-screen.dart';
 import 'package:expense_tracker/ui/screens/expenses_screen.dart';
+import 'package:flutter/material.dart';
 
-class HomeLayout extends StatefulWidget {
-  const HomeLayout({super.key});
+class HScreen extends StatefulWidget {
+  const HScreen({super.key});
 
   @override
-  State<HomeLayout> createState() => _HomeLayoutState();
+  State<HScreen> createState() => _HScreenState();
 }
 
-class _HomeLayoutState extends State<HomeLayout> {
+class _HScreenState extends State<HScreen> {
   int currentIndex = 0;
   List<Widget> screens = [
     HomeScreen(),
@@ -27,22 +26,15 @@ class _HomeLayoutState extends State<HomeLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 1,
-        backgroundColor: Color.fromARGB(255, 249, 247, 247),
-        title: Text(
-          "Hello ${titles[currentIndex]}",
-          style: TextStyle(color: Colors.black),
-        ),
-      ),
-      // body: HomeScreen(),
+      appBar: AppBar(),
+      body: HomeScreen(),
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: currentIndex,
           onTap: (value) => setState(() {
                 currentIndex = value;
               }), //يعلمني انا  قاعده اضغط على ايش
-          // ignore: prefer_const_literals_to_create_immutables
+          //ignore: prefer_const_literals_to_create_immutables
           items: [
             // need icon and label
             // ignore: prefer_const_constructors
