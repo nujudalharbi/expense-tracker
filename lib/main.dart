@@ -1,5 +1,6 @@
 import 'dart:ffi';
 
+import 'package:expense_tracker/goals_page.dart';
 import 'package:flutter/material.dart';
 
 import 'popUp.dart';
@@ -17,9 +18,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+        primaryColorLight: Color.fromRGBO(0, 71, 147, 1),
+        // primarySwatch: Colors.blue,
       ),
-      home: const MyProfile(),
+      home: const MyGoals(),
     );
   }
 }

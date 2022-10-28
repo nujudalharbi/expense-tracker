@@ -61,7 +61,8 @@ class _MyProfileState extends State<MyProfile> {
                                     fixedSize: Size.fromWidth(100),
                                     side: BorderSide(
                                         width: 1.0,
-                                        color: Color.fromRGBO(0, 71, 147, 1)),
+                                        color: Color.fromRGBO(0, 71, 147, 1),
+                                        ),
                                   ),
                                   child: Text(
                                     'Goals',
